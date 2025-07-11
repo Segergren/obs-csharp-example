@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+  	<Compile Remove="libobs-sharp\libobs-sharp.example\**" />
+  	<Compile Remove="UserInterface\**" />
+  	<EmbeddedResource Remove="libobs-sharp\libobs-sharp.example\**" />
+  	<EmbeddedResource Remove="UserInterface\**" />
+  	<None Remove="libobs-sharp\libobs-sharp.example\**" />
+  	<None Remove="UserInterface\**" />
+  </ItemGroup>
+</Project>

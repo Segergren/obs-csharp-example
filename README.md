@@ -29,3 +29,8 @@ Does anyone have any clue on what can cause this behaviour or any idea on how to
 3. Download the .zip file (https://github.com/Segergren/Segra/blob/main/obs.zip) and extract it there (make sure that everything is in the exact same folder)
 4. Go to `libobs-sharp/libobs-sharp/obs.cs` and remove row 12 and 14 -> 16 so it just says `public const string importLibrary = @"obs";`
 5. Run!
+
+# Working example
+The branch below is working but has screen tearing and lag. Test yourself by comparing it to a normal OBS recording.
+
+[working-with-screen-tearing-and-lag](https://github.com/Segergren/obs-csharp-example/tree/working-with-screen-tearing-and-lag) or MR https://github.com/Segergren/obs-csharp-example/pull/1

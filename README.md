@@ -22,3 +22,10 @@ instead of just logging
 ```
 
 Does anyone have any clue on what can cause this behaviour or any idea on how to fix this. 
+
+# SETUP
+1. Start the application once and it will fail
+2. Navigate to the `bin\Debug\net8.0` folder (example: `C:\Users\OlleS\source\repos\OBSTest\bin\Debug\net8.0`)
+3. Download the .zip file (https://github.com/Segergren/Segra/blob/main/obs.zip) and extract it there (make sure that everything is in the exact same folder)
+4. Go to `libobs-sharp/libobs-sharp/obs.cs` and remove row 12 and 14 -> 16 so it just says `public const string importLibrary = @"obs";`
+5. Run!

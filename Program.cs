@@ -32,6 +32,12 @@ namespace ObsTest
                 "./data/obs-plugins/%module%/"
             );
 
+            // Now it's above obs_reset_video and it works! But laggy!
+            // https://docs.obsproject.com/frontends#initialization-and-shutdown
+            obs_load_all_modules();
+            obs_log_loaded_modules();
+            obs_post_load_modules();
+
             obs_video_info videoInfo = new obs_video_info()
             {
                 adapter = 0,
@@ -67,12 +73,6 @@ namespace ObsTest
             {
                 throw new Exception("error: obs_reset_audio failed");
             }
-
-            // HERE! This needs to be moved above obs_reset_video! That's not what the docs say.
-            // https://docs.obsproject.com/frontends#initialization-and-shutdown
-            obs_load_all_modules();
-            obs_log_loaded_modules();
-            obs_post_load_modules();
 
             // Create display capture source (video)
             IntPtr displayCaptureSettings = obs_data_create();
